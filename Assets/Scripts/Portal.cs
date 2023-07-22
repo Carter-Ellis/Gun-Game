@@ -15,6 +15,10 @@ public class Portal : MonoBehaviour
     {
         if (coll.enabled)
         {
+            if (coll.tag == "Item")
+            {
+                return;
+            }
             GameObject obj = coll.gameObject;
             GameObject exitPortal = isBlue ? shoot.orangePortal : shoot.bluePortal;
             if (exitPortal == null) 

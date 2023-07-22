@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rb;
     private bool facingRight = true;
-    float horizontal = 0;
+    private bool onGround = true;
+    float horizontal = 0; 
 
    void Awake()
     {
@@ -21,13 +22,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        onGround = player.onGround || player.onGround2 || player.onGround3;
         if (inventory.isActive)
         {
             return;
         }
         anim.SetFloat("horizontal", Mathf.Abs(Input.GetAxis("Horizontal")));
         anim.SetFloat("vertical", rb.velocity.y);
-        anim.SetBool("isGrounded", player.onGround);
+        anim.SetBool("isGrounded", onGround);
         horizontal = Input.GetAxisRaw("Horizontal");
         
         if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight))

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116592269727832100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.362, y: 0.038, z: 0}
+  m_LocalPosition: {x: 0.423, y: 0.038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6872845329023271118}
@@ -40,12 +40,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6872845329023271118}
   - component: {fileID: 5860117746190238894}
-  - component: {fileID: 7968760804740100183}
-  - component: {fileID: -5199827354804979279}
   - component: {fileID: 77588610}
+  - component: {fileID: 1422771022396216771}
   m_Layer: 0
   m_Name: Portal Gun
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,32 +114,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7968760804740100183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7399682486537081866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e215e16bfcc6bc446bff8fb2e0a9164f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: b9eecd2dc77235d4da77c9c25476043a, type: 2}
---- !u!114 &-5199827354804979279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7399682486537081866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894147ada4418d340b7ee69a2c7f61d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: b9eecd2dc77235d4da77c9c25476043a, type: 2}
 --- !u!61 &77588610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,3 +140,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.69492126, y: 0.09010315}
   m_EdgeRadius: 0
+--- !u!114 &1422771022396216771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7399682486537081866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753c3ae91016d8e48815c572f2ed3ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 6bd3b8b0967c9f943bf63766d17f58d3, type: 3}
+  itemName: Portal Gun
+  id: 1
+  level: 1

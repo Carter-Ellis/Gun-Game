@@ -12,27 +12,37 @@ public class Shoot : MonoBehaviour
 
     public GameObject bluePortal;
     public GameObject orangePortal;
-    public SpriteRenderer gunSprite;
+    
     public GameObject blueBullet;
     public GameObject orangeBullet;
     public Transform shootPoint;
     public Animator gunAnim;
+    Player player;
+    private SpriteRenderer gunSprite;
+    private ItemPickup pickup;
     private Inventory inventory;
     public float portalSpawnDist = 1.5f;
     public float bulletSpeed;
     public float fireRate;
     float readyForNextShot; 
-    public bool isPortalGun = true;
 
     void Awake()
     {
         inventory = GetComponent<Inventory>();
+        player = GetComponent<Player>();
+        
     }
 
     void Update()
     {
+        
         if (inventory.isActive)
         {
+            return;
+        }
+        if (!player.equipped)
+        {
+            
             return;
         }
 
@@ -60,13 +70,13 @@ public class Shoot : MonoBehaviour
         Vector3 up = Vector3.Cross(Vector3.forward, direction);
         Quaternion rot = Quaternion.LookRotation(Vector3.forward, up);
         gun.transform.rotation = rot;
-
-        gunSprite.flipY = direction.x < 0;     
+        //gunSprite.transform.rotation = rot;
+        //gunSprite.flipY = direction.x < 0;     
         
     }
     void ShootBullet(bool isBlue)
     {
-        if (isPortalGun)
+        if (inventory.itemIds[inventory.itemHeld] == 1)
         {
             gunAnim.SetTrigger("shoot");
             GameObject prefab = isBlue ? blueBullet : orangeBullet;
@@ -74,5 +84,11 @@ public class Shoot : MonoBehaviour
             bulletIns.GetComponent<PortalBullet>().isBlue = isBlue;
             bulletIns.GetComponent<Rigidbody2D>().AddForce(bulletIns.transform.right * bulletSpeed);
         }
+        else if (inventory.itemIds[inventory.itemHeld] == 2)
+        {
+            gunAnim.SetTrigger("shoot");
+            player.rb.velocity = new Vector2(player.rb.velocity.x, 10f);
+        }
+
     }
 }

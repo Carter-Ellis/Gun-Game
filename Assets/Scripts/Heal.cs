@@ -6,6 +6,7 @@ public class Heal : MonoBehaviour
 {
 
     public float healAmount = 10f;
+    public int id = 0;
     Player player;
 
     void Awake()

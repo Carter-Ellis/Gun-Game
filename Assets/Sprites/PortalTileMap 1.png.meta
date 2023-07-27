@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 5919e6cbd87c08745a011ebfe4a96fac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5040354342910310955
+    second: PortalTileMap 1_0
+  - first:
+      213: 7528637596946955269
+    second: PortalTileMap 1_1
+  - first:
+      213: -2167081487345502860
+    second: PortalTileMap 1_2
+  - first:
+      213: 1597975019124147196
+    second: PortalTileMap 1_3
+  - first:
+      213: 2844805610434435247
+    second: PortalTileMap 1_4
+  - first:
+      213: -1876946620158714105
+    second: PortalTileMap 1_5
+  - first:
+      213: 5784276435675339121
+    second: PortalTileMap 1_6
+  - first:
+      213: -767566322783503124
+    second: PortalTileMap 1_7
+  - first:
+      213: -1885795209996480415
+    second: PortalTileMap 1_8
+  - first:
+      213: 3602370228430047604
+    second: PortalTileMap 1_9
+  - first:
+      213: -1681933423979820496
+    second: PortalTileMap 1_10
+  - first:
+      213: -1198425474782874176
+    second: PortalTileMap 1_11
+  - first:
+      213: 4968251931219429597
+    second: PortalTileMap 1_12
+  - first:
+      213: 5860969488066042436
+    second: PortalTileMap 1_13
+  - first:
+      213: 4778717724382719096
+    second: PortalTileMap 1_14
+  - first:
+      213: 112250647524463292
+    second: PortalTileMap 1_15
+  - first:
+      213: -2520978012032974932
+    second: PortalTileMap 1_16
+  - first:
+      213: -745148311023590133
+    second: PortalTileMap 1_17
+  - first:
+      213: 3899585557199843240
+    second: PortalTileMap 1_18
+  - first:
+      213: -345683509938127791
+    second: PortalTileMap 1_19
+  - first:
+      213: -7073072569470992379
+    second: PortalTileMap 1_20
+  - first:
+      213: -6842038341358272482
+    second: PortalTileMap 1_21
+  - first:
+      213: 2829151255116293196
+    second: PortalTileMap 1_22
+  - first:
+      213: -2859903696271168767
+    second: PortalTileMap 1_23
+  - first:
+      213: -8988913023743448619
+    second: PortalTileMap 1_24
+  - first:
+      213: -4640414697913357826
+    second: PortalTileMap 1_25
+  - first:
+      213: -3333150080742431428
+    second: PortalTileMap 1_26
+  - first:
+      213: 1295294501302687058
+    second: PortalTileMap 1_27
+  - first:
+      213: 4397934157807594514
+    second: PortalTileMap 1_28
+  - first:
+      213: -4763886843457316856
+    second: PortalTileMap 1_29
+  - first:
+      213: 3708862909518866438
+    second: PortalTileMap 1_30
+  - first:
+      213: 3057073831860145252
+    second: PortalTileMap 1_31
+  - first:
+      213: -4310214647347183134
+    second: PortalTileMap 1_32
+  - first:
+      213: 8237012726962556559
+    second: PortalTileMap 1_33
+  - first:
+      213: -2650751688834339580
+    second: PortalTileMap 1_34
+  - first:
+      213: 1705989773425344671
+    second: PortalTileMap 1_35
+  - first:
+      213: 849039427586092011
+    second: PortalTileMap 1_36
+  - first:
+      213: -1612501703870992326
+    second: PortalTileMap 1_37
+  - first:
+      213: -7447210434584759155
+    second: PortalTileMap 1_38
+  - first:
+      213: 5006308649944818608
+    second: PortalTileMap 1_39
+  - first:
+      213: -4646339846973698284
+    second: PortalTileMap 1_40
+  - first:
+      213: -7811671109283226864
+    second: PortalTileMap 1_41
+  - first:
+      213: 9118235348652026847
+    second: PortalTileMap 1_42
+  - first:
+      213: -1028053891023182094
+    second: PortalTileMap 1_43
+  - first:
+      213: -8015006972961430755
+    second: PortalTileMap 1_44
+  - first:
+      213: 1533958702423261605
+    second: PortalTileMap 1_45
+  - first:
+      213: -7972284831681973473
+    second: PortalTileMap 1_46
+  - first:
+      213: 4603852916165062722
+    second: PortalTileMap 1_47
+  - first:
+      213: -4138318417383845845
+    second: PortalTileMap 1_48
+  - first:
+      213: 2765077791210985599
+    second: PortalTileMap 1_49
+  - first:
+      213: 90302907052596667
+    second: PortalTileMap 1_50
+  - first:
+      213: -5052846026616820009
+    second: PortalTileMap 1_51
+  - first:
+      213: 3657804461168455185
+    second: PortalTileMap 1_52
+  - first:
+      213: 6591243053455814437
+    second: PortalTileMap 1_53
+  - first:
+      213: 2999722930738277664
+    second: PortalTileMap 1_54
+  - first:
+      213: -8010501258657862561
+    second: PortalTileMap 1_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PortalTileMap 1_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a3447e19fe2f540800000000000000
+      internalID: 5040354342910310955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalTileMap 1_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c7ca881081b7860800000000000000
+      internalID: 7528637596946955269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalTileMap 1_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47532737edafce1e0800000000000000
+      internalID: -2167081487345502860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

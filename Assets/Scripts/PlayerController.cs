@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Inventory inventory;
     public Animator anim;
     public Rigidbody2D rb;
-    private bool facingRight = true;
+    public bool facingRight = true;
     private bool onGround = true;
     float horizontal = 0; 
 

@@ -21,16 +21,23 @@ public class Shoot : MonoBehaviour
     private SpriteRenderer gunSprite;
     private ItemPickup pickup;
     private Inventory inventory;
+    private BoxCollider2D boxCollider;
+    private bool touchingObjRight = false;
+    private bool touchingObjLeft = false;
+    private bool touchingObjDown = false;
+    private bool touchingObjUp = false;
     public float portalSpawnDist = 1.5f;
     public float bulletSpeed;
     public float fireRate;
-    float readyForNextShot; 
+    float readyForNextShot;
+
+    [SerializeField] private LayerMask layers;
 
     void Awake()
     {
         inventory = GetComponent<Inventory>();
         player = GetComponent<Player>();
-        
+        pickup = GetComponent<ItemPickup>();           
     }
 
     void Update()
@@ -46,6 +53,15 @@ public class Shoot : MonoBehaviour
             return;
         }
 
+        gunSprite = pickup.gunObj.GetComponent<SpriteRenderer>();
+
+        boxCollider = pickup.boxCollider;
+
+        touchingObjRight = Physics2D.Raycast(boxCollider.bounds.center, Vector2.right, boxCollider.bounds.extents.x + .02f, layers);
+        touchingObjLeft = Physics2D.Raycast(boxCollider.bounds.center, Vector2.left, boxCollider.bounds.extents.x + .02f, layers);
+        touchingObjDown = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + .08f, layers);
+        touchingObjUp = Physics2D.Raycast(boxCollider.bounds.center, Vector2.up, boxCollider.bounds.extents.y + .08f, layers);
+
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = mousePos - (Vector2)gun.position;
 
@@ -53,8 +69,9 @@ public class Shoot : MonoBehaviour
 
         bool left = Input.GetMouseButtonDown(0);
         bool right = Input.GetMouseButtonDown(1);
+        bool touchingLayer = touchingObjRight || touchingObjLeft || touchingObjDown || touchingObjUp;
 
-        if (left || right)
+        if ((left || right) && !touchingLayer)
         {
             if (Time.time > readyForNextShot)
             {
@@ -70,9 +87,9 @@ public class Shoot : MonoBehaviour
         Vector3 up = Vector3.Cross(Vector3.forward, direction);
         Quaternion rot = Quaternion.LookRotation(Vector3.forward, up);
         gun.transform.rotation = rot;
-        //gunSprite.transform.rotation = rot;
-        //gunSprite.flipY = direction.x < 0;     
-        
+        gunSprite.transform.rotation = rot;
+        gunSprite.flipY = direction.x < 0;
+
     }
     void ShootBullet(bool isBlue)
     {

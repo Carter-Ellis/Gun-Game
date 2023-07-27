@@ -25,7 +25,7 @@ public class Portal : MonoBehaviour
             {
                 return;
             }
-            Vector3 exitDir = exitPortal.transform.up.normalized;
+            Vector3 exitDir = exitPortal.transform.up.normalized / 2;
             Vector3 newPos = exitPortal.transform.position + exitDir * shoot.portalSpawnDist;
             newPos.z = obj.transform.position.z;
             obj.transform.position = newPos;

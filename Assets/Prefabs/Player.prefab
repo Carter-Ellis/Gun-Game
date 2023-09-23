@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1345792120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345792121}
+  m_Layer: 15
+  m_Name: DownDropSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345792121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345792120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2518874922595922731}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1380232133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380232134}
+  m_Layer: 15
+  m_Name: RightDropSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380232134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380232133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.803, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2518874922595922731}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1661047677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661047678}
+  m_Layer: 15
+  m_Name: HoldPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661047678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661047677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47, y: -0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2518874922595922731}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2518874922595922704
 GameObject:
   m_ObjectHideFlags: 0
@@ -18,6 +108,7 @@ GameObject:
   - component: {fileID: 1813866213536984745}
   - component: {fileID: 2518874922731392406}
   - component: {fileID: 2518874922731392397}
+  - component: {fileID: 1270114612724287563}
   m_Layer: 15
   m_Name: Player
   m_TagString: Player
@@ -38,6 +129,9 @@ Transform:
   m_Children:
   - {fileID: 2518874923743817522}
   - {fileID: 2518874923018450292}
+  - {fileID: 1661047678}
+  - {fileID: 1380232134}
+  - {fileID: 1345792121}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,7 +203,7 @@ Rigidbody2D:
   m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 50217ada0bcae4d469eea68988463cff, type: 2}
   m_Interpolate: 1
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2518874922595922711
@@ -131,10 +225,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 24576
   jumpForce: 6
+  sprite: {fileID: 21300000, guid: 63783148ed3c711478e22ac2bfc0b7f5, type: 3}
   onGround: 0
+  onGround1: 0
   onGround2: 0
   onGround3: 0
   moveSpeed: 4
+  direction: {x: 0, y: 0}
   equipped: 0
 --- !u!95 &2518874922595922730
 Animator:
@@ -169,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 2518874923157489486}
   rb: {fileID: 2518874922595922710}
+  facingRight: 1
 --- !u!114 &2518874922595922728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +354,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 0}
   gunObj: {fileID: 0}
+--- !u!114 &1270114612724287563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2518874922595922704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc819603c270864a9b5beb0c0e6fa1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightDropSpot: {fileID: 1380232133}
+  downDropSpot: {fileID: 1345792120}
+  holdPos: {fileID: 1661047677}
+  holding: 0
+  layers:
+    serializedVersion: 2
+    m_Bits: 24576
 --- !u!1 &2518874923018450293
 GameObject:
   m_ObjectHideFlags: 0

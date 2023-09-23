@@ -7,6 +7,7 @@ public class ItemPickup : MonoBehaviour
 {
     Item item;
     Player player;
+    Grab grab;
     Vector3 holdPos = new Vector3(0.312f, -0.087f, -6) / 2;
     Shoot shoot;
     public BoxCollider2D boxCollider;
@@ -18,6 +19,7 @@ public class ItemPickup : MonoBehaviour
         player = gameObject.GetComponent<Player>();
         shoot = gameObject.GetComponent<Shoot>();
         playerController = gameObject.GetComponent<PlayerController>();
+        grab = gameObject.GetComponent<Grab>();
     }
 
     void Pickup(GameObject obj)
@@ -40,7 +42,7 @@ public class ItemPickup : MonoBehaviour
         
         obj.GetComponent<Collider2D>().enabled = false;
         
-        if (player.equipped)
+        if (player.equipped || grab.holding)
         {
             obj.SetActive(false);
         }

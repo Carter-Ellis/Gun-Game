@@ -12,11 +12,13 @@ public class Enemy : MonoBehaviour
     BoxCollider2D boxCollider;
     SpriteRenderer spriteRenderer;
     bool facingLeft = false;
+    public Sprite hitSprite;
+    Sprite originalSprite;
     
     [Header("Health")]
 
     int health = 30;
-    int minHitSpeed = 8;
+    int minHitSpeed = 7;
     
 
     [Header("Laser")]
@@ -43,14 +45,20 @@ public class Enemy : MonoBehaviour
         source = gameObject.GetComponent<AudioSource>();
         source.clip = fire;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalSprite = spriteRenderer.sprite;
         if (spriteRenderer.flipX)
         {
             facingLeft = true;
+            shootPoint.transform.localPosition = new Vector2(-shootPoint.transform.localPosition.x, shootPoint.transform.localPosition.y);
         }
     }
 
     void Update()
     {
+        if (health <= 0)
+        {
+            Die();
+        }
 
         if (gameObject.transform.position.y < -10)
         {
@@ -72,12 +80,8 @@ public class Enemy : MonoBehaviour
                 
             ShootLaser();
         }        
-            range = 15;
-
-        if (health <= 0)
-        {
-            Die();
-        }
+        range = 15;
+     
     }
 
     void ShootLaser()
@@ -96,7 +100,9 @@ public class Enemy : MonoBehaviour
         if (coll.relativeVelocity.magnitude > minHitSpeed) 
         {
             health -= (int) coll.relativeVelocity.magnitude;
-            print("OOF: " + health);
+            spriteRenderer.sprite = hitSprite;
+            //spriteRenderer.sprite = originalSprite;
+            print("OWA");
         }
     }
 
